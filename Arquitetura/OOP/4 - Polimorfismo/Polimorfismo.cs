@@ -2,15 +2,15 @@
 
 namespace Arquitetura.OOP
 { 
-    public class CafeteiraEspressa : Eletrodomestico
+    public class CafeteiraExpressa : Eletrodomestico
     {
-        public CafeteiraEspressa(string nome, int voltagem)
+        public CafeteiraExpressa(string nome, int voltagem)
             :base(nome, voltagem) 
         {
 
         }
 
-        public CafeteiraEspressa()
+        public CafeteiraExpressa()
             :base("Padrao", 220) //construtor vazio
         {
 
