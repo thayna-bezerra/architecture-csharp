@@ -1,12 +1,23 @@
 ﻿using System;
 
-namespace Arquitetura
+namespace Arquitetura.OOP
 {
-    class Program
+    public class Pessoa
     {
-        static void Main(string[] args)
+        //Estados
+        public string Nome { get; set; }
+
+        public DateTime DataNascimento { get; set; }
+
+        //Comportamento
+        public int CalcularIdade()
         {
-            Console.WriteLine("Hello World!");
+            var dataAtual = DateTime.Now;
+            var idade = dataAtual.Year - DataNascimento.Year;
+
+            if (dataAtual < DataNascimento.AddYears(idade)) idade--;
+
+            return idade;
         }
     }
 }
