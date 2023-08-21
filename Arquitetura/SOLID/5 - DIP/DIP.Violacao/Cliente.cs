@@ -12,7 +12,7 @@ namespace Arquitetura.SOLID.DIP.Violacao
 
         public bool IsValid()
         {
-            return EmailServices.IsValid(Email) && CPFServices.Isvalid(CPF);
+            return EmailServices.IsValid(Email) && CPFServices.IsValid(CPF);
         }
     }
 }
