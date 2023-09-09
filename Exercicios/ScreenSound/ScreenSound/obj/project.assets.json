@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thayná Bezerra\\source\\repos\\ScreenSound\\ScreenSound\\ScreenSound.csproj",
+      "projectUniqueName": "C:\\Users\\Thayná Bezerra\\OneDrive\\Documentos\\GitHub\\architecture-csharp\\Exercicios\\ScreenSound\\ScreenSound\\ScreenSound.csproj",
       "projectName": "ScreenSound",
-      "projectPath": "C:\\Users\\Thayná Bezerra\\source\\repos\\ScreenSound\\ScreenSound\\ScreenSound.csproj",
+      "projectPath": "C:\\Users\\Thayná Bezerra\\OneDrive\\Documentos\\GitHub\\architecture-csharp\\Exercicios\\ScreenSound\\ScreenSound\\ScreenSound.csproj",
       "packagesPath": "C:\\Users\\Thayná Bezerra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thayná Bezerra\\source\\repos\\ScreenSound\\ScreenSound\\obj\\",
+      "outputPath": "C:\\Users\\Thayná Bezerra\\OneDrive\\Documentos\\GitHub\\architecture-csharp\\Exercicios\\ScreenSound\\ScreenSound\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thayná Bezerra\\AppData\\Roaming\\NuGet\\NuGet.Config",
