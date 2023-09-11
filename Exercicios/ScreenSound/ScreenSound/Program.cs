@@ -1,4 +1,5 @@
-﻿using ScreenSound.Modelos;
+﻿using ScreenSound.Menus;
+using ScreenSound.Modelos;
 
 Banda ira = new Banda("Ira");
 ira.AdicionarNota(new Avaliacao(10));
@@ -53,7 +54,9 @@ void ExibirOpcoesDoMenu()
             AvaliarUmaBanda();
             break;
         case 5:
-            ExibirDetalhes();
+            MenuExibirDetalhes menu = new MenuExibirDetalhes();
+            menu.Executar(bandasRegistradas);
+            ExibirOpcoesDoMenu();
             break;
         case -1:
             Console.WriteLine("Tchau tchau :)");
@@ -79,7 +82,7 @@ void RegistrarAlbum()
         Console.WriteLine($"O álbum {tituloAlbum} de {nomeDaBanda} foi registrado com sucesso!");
         Thread.Sleep(4000);
         Console.Clear();
-    } 
+    }
     else
     {
         Console.WriteLine($"\nA banda {nomeDaBanda} não foi encontrada!");
@@ -123,15 +126,6 @@ void MostrarBandasRegistradas()
 
 }
 
-void ExibirTituloDaOpcao(string titulo)
-{
-    int quantidadeDeLetras = titulo.Length;
-    string asteriscos = string.Empty.PadLeft(quantidadeDeLetras, '*');
-    Console.WriteLine(asteriscos);
-    Console.WriteLine(titulo);
-    Console.WriteLine(asteriscos + "\n");
-}
-
 void AvaliarUmaBanda()
 {
     Console.Clear();
@@ -158,33 +152,6 @@ void AvaliarUmaBanda()
         ExibirOpcoesDoMenu();
     }
 
-}
-
-void ExibirDetalhes()
-{
-    Console.Clear();
-    ExibirTituloDaOpcao("Exibir detalhes da banda");
-    Console.Write("Digite o nome da banda que deseja conhecer melhor: ");
-    string nomeDaBanda = Console.ReadLine()!;
-
-    if (bandasRegistradas.ContainsKey(nomeDaBanda))
-    {
-        Banda banda = bandasRegistradas[nomeDaBanda];
-        Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media}.");
-        Console.WriteLine("Digite uma tecla para votar ao menu principal");
-        Console.ReadKey();
-        Console.Clear();
-        ExibirOpcoesDoMenu();
-
-    }
-    else
-    {
-        Console.WriteLine($"\nA banda {nomeDaBanda} não foi encontrada!");
-        Console.WriteLine("Digite uma tecla para voltar ao menu principal");
-        Console.ReadKey();
-        Console.Clear();
-        ExibirOpcoesDoMenu();
-    }
 }
 
 ExibirOpcoesDoMenu();
