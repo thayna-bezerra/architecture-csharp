@@ -21,7 +21,7 @@ internal class MenuExibirDetalhes : Menu
                 Console.WriteLine($"{album.Nome} -> {album.Media}");
             }
 
-            Console.WriteLine("\nDigite uma tecla para votar ao menu principal");
+            Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
             Console.ReadKey();
             Console.Clear();
 
