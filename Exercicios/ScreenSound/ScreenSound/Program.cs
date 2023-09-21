@@ -1,5 +1,15 @@
 ﻿using ScreenSound.Menus;
 using ScreenSound.Modelos;
+using OpenAI_API;
+
+var client = new OpenAIAPI("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");
+
+var chat = client.Chat.CreateConversation();
+
+chat.AppendSystemMessage("Resuma a banda Ira! em 1 parágrafo. Adote um estilo informal.");
+
+string resposta = await chat.GetResponseFromChatbotAsync();
+Console.WriteLine(resposta);
 
 Banda ira = new Banda("Ira");
 ira.AdicionarNota(new Avaliacao(10));
@@ -61,4 +71,4 @@ void ExibirOpcoesDoMenu()
     else Console.WriteLine("Opção inválida");
 }
 
-ExibirOpcoesDoMenu();
+//ExibirOpcoesDoMenu();
