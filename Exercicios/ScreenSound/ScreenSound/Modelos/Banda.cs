@@ -20,6 +20,8 @@ internal class Banda : IAvaliavel
         }
     }
 
+    public string? Resumo { get; set; }
+
     public IEnumerable<Album> Albuns => albuns;
 
     public void AdicionarAlbum(Album album)
